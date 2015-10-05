@@ -40,7 +40,7 @@
         
 		[LocationUtil updateGpsAccuracy:locationManager];
 		[locationManager startUpdatingLocation];
-//		refDelegate.timeout = [NSTimer scheduledTimerWithTimeInterval:30 target:refDelegate selector:@selector(errorFindingLocation) userInfo:nil repeats:NO];
+		refDelegate.timeout = [NSTimer scheduledTimerWithTimeInterval:30 target:refDelegate selector:@selector(errorFindingLocation) userInfo:nil repeats:NO];
 	}
 	else{
 		[appDelegate hideActivityViewer];

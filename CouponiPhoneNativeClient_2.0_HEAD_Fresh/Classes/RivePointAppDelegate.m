@@ -282,8 +282,8 @@ void uncaughtExceptionHandler(NSException *e) {
 	optionNames = [[NSArray alloc] initWithObjects:@"Saved Coupons",@"Shared Coupons",@"Saved Loyalty Coupons",@"Shared Loyalty Coupons",@"Delete All Shared",@"Delete All Saved", nil];
 	optionIcons = [[NSArray alloc] initWithObjects:@"save-menu.png",@"share-menu.png",@"loilttyIphoneIcon.png",@"loilttyIphoneIcon.png",@"empty-shared-menu.png",@"delete-save-menu.png", nil];
 
-//	[window addSubview:navController.view];
-//    [window addSubview:tabBarController.view];
+	[window addSubview:navController.view];
+    [window addSubview:tabBarController.view];
 	
 	//initialize instance variables
 	[self initializeComponents];
