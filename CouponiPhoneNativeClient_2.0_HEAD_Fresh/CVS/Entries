@@ -1,0 +1,56 @@
+/.cvsignore/1.2/Fri May  7 19:43:36 2010//
+/.project/1.2/Fri May  7 19:44:39 2010//
+/BAFillableStar.h/1.2/Fri May  7 19:44:39 2010/-kb/
+/BAFillableStar.m/1.2/Fri May  7 19:44:39 2010/-kb/
+/BAUIStarSlider.h/1.2/Fri May  7 19:44:39 2010/-kb/
+/BAUIStarSlider.m/1.2/Fri May  7 19:44:39 2010/-kb/
+/BrowseView.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/BrowseViewCell.xib/1.3/Wed Jun  9 20:06:37 2010/-kb/
+/BrowseViewController.h/1.2/Fri May  7 19:44:39 2010/-kb/
+/BrowseViewController.m/1.2/Fri May  7 19:44:39 2010/-kb/
+/COTD.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+D/Classes////
+/Coupon.xib/1.6/Tue Mar 12 08:15:16 2013/-kb/
+/CouponDetail.xib/1.4/Tue Mar 12 08:15:16 2013/-kb/
+/CouponViewCell.xib/1.6/Tue Mar 12 08:15:16 2013/-kb/
+/Email.xib/1.4/Tue Mar 12 08:15:16 2013/-kb/
+/EmailViewController.h/1.3/Wed Sep 14 12:21:13 2011/-kb/
+/EmailViewController.m/1.6/Tue Mar 12 08:15:16 2013/-kb/
+/FeedbackAlertView.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+D/FlurryLibWithLocation////
+/GeneralTableView.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/Info.plist/1.4/Tue Mar 12 08:15:16 2013/-kb/
+/LabelViewCell.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/ListCouponsView.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/ListVendorView.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/LocationButton.xib/1.3/Tue Oct 26 00:49:44 2010/-kb/
+/LocationButtonController.h/1.3/Tue Jun 15 17:19:34 2010/-kb/
+/LocationButtonController.m/1.5/Tue Mar 12 08:15:16 2013/-kb/
+/MainWindow.xib/1.7/Tue Mar 12 08:15:16 2013/-kb/
+/Maps.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/MoreCell.xib/1.3/Wed Jun  9 20:06:37 2010/-kb/
+/MyCouponsView.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/MyCouponsViewCell.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+D/NewImages////
+/OverlayView.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/Processing.xib/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/Reload.xib/1.3/Wed Jun  9 20:06:37 2010/-kb/
+/RightBarButtonItems.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+D/RivePoint.xcodeproj////
+/RivePoint_Prefix.pch/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/SavedVender.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/SavedVendorCell.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/SearchNib.xib/1.2/Fri May  7 19:44:39 2010/-kb/
+/SettingsView.xib/1.6/Tue Mar 12 08:15:16 2013/-kb/
+D/ShareExternalAPIs////
+/VendorCellSponsored.xib/1.3/Wed Jun  9 20:06:37 2010/-kb/
+/VendorViewCell.xib/1.5/Tue Mar 12 08:15:16 2013/-kb/
+D/ZXing-1.6////
+/beep-beep.aiff/1.2/Tue Mar 12 08:15:16 2013/-kb/
+/db-script.txt/1.4/Tue Mar 12 08:15:16 2013//
+D/en.lproj////
+/flurry.txt/1.2/Wed Jun 23 19:30:13 2010//
+/main.m/1.3/Tue Mar 12 08:15:16 2013/-kb/
+/main.mm/1.2/Tue Mar 12 08:15:16 2013/-kb/
+/rivepoint-coupon.sql/1.5/Tue Mar 12 08:15:15 2013/-kb/
+/url.txt/1.3/Tue Mar 12 08:15:16 2013//

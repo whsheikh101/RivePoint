@@ -1,0 +1,70 @@
+CREATE TABLE "settings" 
+(
+
+"Id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+"deviceId" VARCHAR(100) NOT NULL ,
+"email" VARCHAR(50) default '' ,
+"zip" VARCHAR(20) default '' ,
+"longitude" VARCHAR(50) default '' ,
+"latitude" VARCHAR(50) default '' ,
+"city" VARCHAR(50) default '' ,
+"county" VARCHAR(50) default '' ,
+"state" VARCHAR(50) default '' ,
+"country" VARCHAR(50) default '',
+"enableGPS" VARCHAR(20) default '',
+"gpsAccuracy" VARCHAR(20) default '',
+"subsId" INTEGER default -1
+);
+
+CREATE TABLE "poi" 
+(
+
+"Id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+"poiId" VARCHAR(20) NOT NULL ,
+"poiSequenceNumber" VARCHAR(20) default '' ,
+"poiCategoryId" VARCHAR(20) default '' ,
+"name" VARCHAR(45) default '' ,
+"phoneNumber" VARCHAR(20) default '' ,
+"completeAddress" VARCHAR(255) default '' ,
+"distance" VARCHAR(45) default '' ,
+"couponCount" VARCHAR(20) default '' ,
+"imageName" VARCHAR(255) default '',
+"isSponsored" VARCHAR(20) default '',
+"userPoints" VARCHAR(20) default NULL
+);
+
+CREATE TABLE "coupon" 
+(
+
+"Id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+"couponId" VARCHAR(100) NOT NULL ,
+"title" VARCHAR(16) default '' ,
+"subTitleLineOne" VARCHAR(20) default '' ,
+"subTitleLineTwo" VARCHAR(20) default '' ,
+"couponUniqueCode" VARCHAR(20) default '' ,
+"validFrom" REAL(14) default '' ,
+"validTo" REAL(14) default '' ,
+"vendorLogoImageName" VARCHAR(255) default '',
+"couponImageName" VARCHAR(255) default '',
+"couponType" VARCHAR(20) default '',
+"isRestrictedCoupon" VARCHAR(50) default '',
+"perUSerRedemption" VARCHAR(50) default '',
+"userRedemptionCount" VARCHAR(50) default '',
+"isAvailable" VARCHAR(50) default '',
+"earningPoints" VARCHAR(20) default NULL,
+"reqdPoints" VARCHAR(20) default NULL
+);
+
+CREATE TABLE "poi_coupon" 
+(
+
+"Id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
+"poiId" INTEGER NOT NULL ,
+"couponId" INTEGER NOT NULL ,
+FOREIGN KEY (poiId) REFERENCES poi(poiId),
+FOREIGN KEY (couponId) REFERENCES coupon(couponId) ON DELETE CASCADE
+
+);
+
+CREATE TABLE "version" ("versionNo" VARCHAR NOT NULL );
+

@@ -1,0 +1,56 @@
+"application.name" = "Rivepoint";
+"url.google.maps" = "http://maps.google.com/maps?q=%@";
+
+"message.gps.enable.alert" = "Your ZIP Code is currently set to %@ and your gps preference 
+		is disabled in your account settings. If you would like to get local listings click 'Enable GPS' below.";
+
+"message.alert.default.settings" = "%@\nYour default ZIP Code is set to %@ You can change the ZIP Code from Settings Screen."; 
+
+
+"message.no.coupon.found" = "No Coupons found.";
+"message.redemption.limit.exhausted" = "You have reached your limit for redeeming this coupon.";
+"message.coupon.not.available" = "Coupon is not available.";
+"message.invalid.zip.code" = "ZIP Code is invalid.";
+"message.no.poi.found" = "No record found.";
+"message.did.u.mean" = "Did you mean:";
+"message.invalid.email" = "Invalid Email Address.";
+"message.cant.call" = "Can't initiate this call.";
+"message.maps.cant.open" = "Google Maps cannot be opened.";
+"message.no.phone" = "Phone No. not available.";
+"message.coupon.already.saved" = "Coupon already saved." ;
+"message.coupon.saved.successfully" = "Coupon saved successfully." ;
+"message.no.saved.coupon.found" = "No saved coupon found.";
+"message.coupon.deleted.successfully" = "Coupon deleted successfully.";
+"message.coupon.shared.successfully" = "Coupon shared successfully.";
+"message.feedback.registered.successfully" = "Your feedback sent successfully.";
+"message.delete.all.shared.coupons.success" = "Success! Shared Coupon Inbox is now empty.";
+"message.shared.inbox.is.empty" = "Shared Coupon inbox is empty.";
+"message.no.cotd.found" = "No coupon of the day found.";
+"message.delete.all.coupons" = "All coupons are deleted successfully.";
+
+
+"error.service.not.avaiable" = "Internet connection appears to be offline!";
+"error.update.email" = "Sorry! Failed to update email!";
+"error.coupon.saved" = "Sorry! Failed to save coupon.";
+"error.delete.coupon" = "Sorry! Failed to delete coupon.";
+"error.sharing.coupon" = "Coupon sharing failure.";
+"error.feedback.registraton.failed" = "Feedback registration failed.";
+"error.in.delete.all.shared.coupon.operation" = "Failed to empty Shared Coupon Inbox!";
+"error.failed.to.update.location" = "Failed to update location.";
+"error.reverse.geocoding.location" = "Failed to reverse geocode location.";
+
+"error.location.service.not.enabled" = "You currently have all location services for this device disabled.";
+"error.location.network.unavailable" = "The network was unavailable or a network error occurred.";
+"error.location.user.denial" = "Please! Allow RivePoint to get your current location.";
+
+"confirmation.operation.empty.shared.inbox" = "Are you sure you want to empty Shared Coupons Inbox?";
+"confirmation.operation.delete.coupon.inbox" = "Are you sure, you want to delete this coupon?";
+"confirmation.operation.delete.all.coupons" = "Are you sure, you want to delete all coupons?";
+"confirmation.operation.change.poi" = "Do you want to change the redeemable location of this coupon?";
+
+//Coupon Detail Screen Strings
+"label.to.from.date" = "\nFrom %@ To %@";
+"label.redemption.status" = "\n%@ used out of %@";
+"label.cd.name" = "Name: %@\n";
+"label.cd.address" = "Address: %@\n";
+"label.cd.distance" = "Distance: %@";
