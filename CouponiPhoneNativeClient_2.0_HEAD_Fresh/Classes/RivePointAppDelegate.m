@@ -146,7 +146,7 @@ ProcessViewController *waitScreenView;
 
 - (void) initializeSetting {
 	VersionManager *vm = [[VersionManager alloc] init];
-	shouldUpdateLocationAtStartup = NO;
+	shouldUpdateLocationAtStartup = YES;
 	BOOL isVersionTableExist = [vm isTableExist];
 	if(!isVersionTableExist){
 		DBManager *dbManager = [[DBManager alloc] init];
@@ -174,12 +174,6 @@ ProcessViewController *waitScreenView;
 			NSLog(@"Failed to insert settings ");
 		}
 	}
-//	else{
-//		NSLog(@"Setings found") ;
-//	}
-	
-//	int src = [setting retainCount];
-
 }
 
 
@@ -264,14 +258,6 @@ void uncaughtExceptionHandler(NSException *e) {
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
     // Add the tab bar controller's current view as a subview of the window
-	//UIImage *defaultImage=[[UIImage alloc] initWithContentsOfFile:@"Default.png"];
-	//defaultImageView= [[UIImageView alloc] initWithImage:defaultImage];
-	//[window addSubview:defaultImageView];
-	//[window bringSubviewToFront:defaultImageView];
-	
-//    [self report_memory]; //show memory status
-    
-    
     _facebook = [[Facebook alloc]initWithAppId:@"219979578145441" andDelegate:self];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults objectForKey:@"FBAccessTokenKey"] 
@@ -283,12 +269,9 @@ void uncaughtExceptionHandler(NSException *e) {
     _twitter = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate: self];
   	_twitter.consumerKey = TWITTER_CONSUMER_KEY;
 	_twitter.consumerSecret = TWITTER_CONSUMER_SECRATE;
-//    [_twitter requestRequestToken];
     self.shouldBackToShare = NO;
 	self.shouldNotShareAlert = NO;
-//    [self fetchUserProfile];
     [self fetchUserLogedInId];
-    
 	[self loadRivepointServerURLString];
 	[self createCouponPreviewImageDictionary];
 	[self createLogoDictionary];
@@ -299,8 +282,8 @@ void uncaughtExceptionHandler(NSException *e) {
 	optionNames = [[NSArray alloc] initWithObjects:@"Saved Coupons",@"Shared Coupons",@"Saved Loyalty Coupons",@"Shared Loyalty Coupons",@"Delete All Shared",@"Delete All Saved", nil];
 	optionIcons = [[NSArray alloc] initWithObjects:@"save-menu.png",@"share-menu.png",@"loilttyIphoneIcon.png",@"loilttyIphoneIcon.png",@"empty-shared-menu.png",@"delete-save-menu.png", nil];
 
-	[window addSubview:navController.view];
-    [window addSubview:tabBarController.view];
+//	[window addSubview:navController.view];
+//    [window addSubview:tabBarController.view];
 	
 	//initialize instance variables
 	[self initializeComponents];
@@ -308,26 +291,15 @@ void uncaughtExceptionHandler(NSException *e) {
 	
 	//initialize settings from db
 	[self initializeSetting];
-	
-	//[self checkEmail];
-    
-//    self.userSubsId = [[NSUserDefaults standardUserDefaults] valueForKey:k_User_Regis_Id];
+ 
 	if([setting.subsId isEqualToString:@"-1"]){
-//    if (!self.userSubsId || self.userSubsId.length <= 0) {
 		waitScreenView = [[ProcessViewController alloc] initWithNibName:@"Processing" bundle:nil];
 		[window addSubview:waitScreenView.view];
 		[window bringSubviewToFront:waitScreenView.view];
 	}
-    
-    
-    
-	//[FlurryAPI countPageViews:navController];
-	
-//	[self updateSavedCouponsTabBarItem];
-//	browseScreenZIPBarButton.title =  self.setting.zip;
-	
-	
+    NSLog(@"Location:%hhd",shouldUpdateLocationAtStartup);
 	if(shouldUpdateLocationAtStartup){
+        
 		[FileUtil resetUserDefaults];
 		tabBarController.selectedViewController = settingNavController;
 		locationUpdater = [[LocationUpdater alloc] init];
@@ -337,50 +309,12 @@ void uncaughtExceptionHandler(NSException *e) {
 		[window addSubview:startupSettingsViewController.view];
 		[window bringSubviewToFront:startupSettingsViewController.view];
 		[locationUpdater updateLocation];
-		
+        
+        self.window.rootViewController = tabBarController;
+        [self.window makeKeyAndVisible];
 	}
-	
-
-//	int noOfLevels = [FileUtil getIntegerFromNSUserDefaultsPerfs:NO_OF_LEVELS];
-//	if(noOfLevels > 0){
-//	
-//		self.loadFromPersistantStore = YES;
-//		int level1 = [FileUtil getIntegerFromNSUserDefaultsPerfs:LEVEL1];
-//		
-//		switch (level1) {
-//			case GET_COUPONS:
-//				tabBarController.selectedViewController = getCouponsNavController;
-//				break;
-//			case SEARCH:
-//				tabBarController.selectedViewController = searchNavController;
-//				break;
-//			case BROWSE:
-//				tabBarController.selectedViewController = browseNavController;
-//				break;
-//			case GET_LOYALTY_POIS:
-//				tabBarController.selectedViewController = loyaltyNavController;
-//				break;				
-//			default:
-//				break;
-//		}
-//
-//	}
-/*	else{
-		[self setFlurrySession];
-	}*/
-	
 }
 
-/*
--(void) setFlurrySession{
-	[FlurryAPI startSession:[FlurryUtil getFlurryAppID]];
-	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-	if(![setting.subsId isEqualToString:@"-1"]){
-		[FlurryAPI setUserID:self.setting.subsId];
-	}
-	[FlurryAPI setAppVersion:RIVEPOINT_CLIENT_VERSION];
-	[FlurryAPI logEvent:LOGIN_EVENT];
-}*/
 -(LocationUpdater *) getLocationUpdatorInstance{
 	if(!locationUpdater){
 		locationUpdater = [[LocationUpdater alloc] init];

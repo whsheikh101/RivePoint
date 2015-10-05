@@ -203,8 +203,8 @@
 
 }
 
--(void) viewDidUnload
-{
+-(void) viewDidUnload{
+    appDelegate = (RivePointAppDelegate *)[[UIApplication sharedApplication] delegate];
     btnEmail = nil;
     btnFB = nil;
     btnTwtr = nil;

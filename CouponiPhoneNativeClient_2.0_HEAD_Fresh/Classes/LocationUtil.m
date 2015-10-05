@@ -40,8 +40,7 @@
         
 		[LocationUtil updateGpsAccuracy:locationManager];
 		[locationManager startUpdatingLocation];
-		refDelegate.timeout = [NSTimer scheduledTimerWithTimeInterval:30 target:refDelegate selector:@selector(errorFindingLocation) userInfo:nil repeats:NO];
-
+//		refDelegate.timeout = [NSTimer scheduledTimerWithTimeInterval:30 target:refDelegate selector:@selector(errorFindingLocation) userInfo:nil repeats:NO];
 	}
 	else{
 		[appDelegate hideActivityViewer];
@@ -61,10 +60,7 @@
 
 }
 +(void) updateGpsAccuracy:(CLLocationManager *)locationManager{
-	//RivePointAppDelegate *appDelegate = (RivePointAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
-	locationManager.desiredAccuracy =  kCLLocationAccuracyHundredMeters;//[appDelegate.setting.gpsAccuracy intValue];
-	//locationManager.distanceFilter = [appDelegate.setting.gpsAccuracy intValue];
+	locationManager.desiredAccuracy =  kCLLocationAccuracyHundredMeters;
 }
 +(void) updateLocation:(CLLocation *)newLocation locationManager:(CLLocationManager *)locationManager{
 	RivePointAppDelegate *appDelegate = (RivePointAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -73,9 +69,6 @@
 		NSString *lat = [[NSString alloc] initWithFormat:@"%f" , appDelegate.lastKnownLocation.coordinate.latitude];
 		NSString *lng = [[NSString alloc] initWithFormat:@"%f" , appDelegate.lastKnownLocation.coordinate.longitude];
 	
-//		NSLog(@" updated latitude %@" , lat);
-//		NSLog(@" updated longitude %@" , lng);
-	
 		appDelegate.setting.latitude = lat;
 		appDelegate.setting.longitute = lng;
 		appDelegate.setting.zip = @"";
@@ -83,7 +76,5 @@
 		[lng release];
 
 	[LocationUtil gpsOff:locationManager];
-	
-
 }
 @end
