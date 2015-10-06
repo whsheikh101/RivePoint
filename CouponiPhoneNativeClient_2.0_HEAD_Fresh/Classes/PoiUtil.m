@@ -93,7 +93,7 @@
 				UIViewController *c = [[UIViewController alloc] initWithNibName:poiCell bundle:nil];
 				cell = (VendorViewCell *) c.view;
 				[cell setBackGroundWithPod];
-				cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+				//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 				[c release];
 			}
 //            else{

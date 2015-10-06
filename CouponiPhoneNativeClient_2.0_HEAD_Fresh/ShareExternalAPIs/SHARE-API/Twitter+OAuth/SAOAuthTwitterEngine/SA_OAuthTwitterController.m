@@ -99,7 +99,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 		if (UIInterfaceOrientationIsLandscape( self.orientation ) )
 			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 32, 480, 288)];
 		else
-			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 44, 320, 416)];
+			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 64, 320, 416)];
 		
 		_webView.alpha = 0.0;
 		_webView.delegate = self;
@@ -147,9 +147,10 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 		
 		_navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, 480, 32)] autorelease];
 	} else {
-		self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 416)] autorelease];	
-		_backgroundView.frame =  CGRectMake(0, 44, 320, 416);
-		_navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, 320, 44)] autorelease];
+		self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 44, 320, 416)] autorelease];
+		_backgroundView.frame =  CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height);
+        [_backgroundView sizeToFit];
+        _navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 20, 320, 44)] autorelease];
 	}
 	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
 	_backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

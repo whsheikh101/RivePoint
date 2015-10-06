@@ -371,13 +371,15 @@
             shareIt.couponId = couponRef.couponId;
             shareIt.poiId = poi.poiId;
             [shareIt showShareDialog:@""];
-//            NSString *emailString = appDelegate.setting.email;
-//            if ([emailString isEqualToString:@"Not Available"] || [emailString isEqualToString:@""]) {
-//                NSLog(@"askForUserEmail called");
-//                [appDelegate askForUserEmail:shareIt];
-//            }else{
-//                [shareIt showShareDialog:@""];
-//            }
+            /*
+            NSString *emailString = appDelegate.setting.email;
+            if ([emailString isEqualToString:@"Not Available"] || [emailString isEqualToString:@""]) {
+                NSLog(@"askForUserEmail called");
+                [appDelegate askForUserEmail:shareIt];
+            }else{
+                [shareIt showShareDialog:@""];
+            }
+             */
         }
         else
         {

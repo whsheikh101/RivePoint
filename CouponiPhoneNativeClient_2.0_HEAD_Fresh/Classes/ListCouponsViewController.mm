@@ -43,7 +43,7 @@
 	if(nil == cell) {
 		UIViewController *c = [[UIViewController alloc] initWithNibName:couponCell bundle:nil];
 		cell = (CouponViewCell *) c.view;
-		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+		//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 		[cell setAttibutesOnLoad];
 		[c release];
 	}
@@ -203,6 +203,9 @@
  - (void)viewDidLoad {
 	 [super viewDidLoad];
      
+     //Scroll view padding removed
+     self.automaticallyAdjustsScrollViewInsets = NO;
+     
      isArranged = NO;
 	 self.title = @"Coupons List";
 	 self.navigationItem.leftBarButtonItem.title = @"List";
@@ -216,11 +219,11 @@
       name:k_Twitter_login_Notification
       object:nil];
 //     [self arrangePOIDataForFirstScreen];
-     
+     /*
      if ([[UIScreen mainScreen] bounds].size.height > 500) {
          NSLog(@"its iPhone 5");
          uiTableView.frame = CGRectMake(uiTableView.frame.origin.x,uiTableView.frame.origin.y, uiTableView.frame.size.width, 295);
-     }
+     }*/
  }
  
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

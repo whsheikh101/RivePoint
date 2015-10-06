@@ -226,10 +226,10 @@
 	//tabItem.title = @"Saved (10)";
     NSString * _userLID = [[NSUserDefaults standardUserDefaults] valueForKey:k_LoggedIn_User_Id];
     if (_userLID && _userLID.length > 0 ) {
-        [logoutBtn setEnabled:YES];
+        [logoutBtn setHidden:NO];
     }
     else
-        [logoutBtn setEnabled:NO];
+        [logoutBtn setHidden:YES];
     
     if ([appDelegate.facebook isSessionValid]) {
         [btnFB setImage:[UIImage imageNamed:@"radio-Btn-on.png"] forState:UIControlStateNormal];
@@ -456,7 +456,7 @@
     [userDefault removeObjectForKey:k_User_Email];
     [userDefault removeObjectForKey:k_User_Password];
 //    appDelegate.userLoginId = @"";
-    [logoutBtn setEnabled:NO];
+    [logoutBtn setHidden:YES];
 }
 
 #pragma mark -

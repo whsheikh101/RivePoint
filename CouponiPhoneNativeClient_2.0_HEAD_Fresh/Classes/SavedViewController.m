@@ -32,7 +32,7 @@
 		}
 	
 	[cell setPoiContent:poi];
-	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	return cell;
 
 }

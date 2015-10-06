@@ -5,6 +5,10 @@
 @implementation CouponDetailViewController
 @synthesize phoneButton;
 
+
+
+
+
 - (void) setDetails:(Coupon *) coupon withPoi:(Poi *)poi {
 	
 	if([poi.isSponsored isEqualToString:@"true"]){

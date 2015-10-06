@@ -146,7 +146,7 @@ ProcessViewController *waitScreenView;
 
 - (void) initializeSetting {
 	VersionManager *vm = [[VersionManager alloc] init];
-	shouldUpdateLocationAtStartup = YES;
+	shouldUpdateLocationAtStartup = NO  ;
 	BOOL isVersionTableExist = [vm isTableExist];
 	if(!isVersionTableExist){
 		DBManager *dbManager = [[DBManager alloc] init];
@@ -309,10 +309,9 @@ void uncaughtExceptionHandler(NSException *e) {
 		[window addSubview:startupSettingsViewController.view];
 		[window bringSubviewToFront:startupSettingsViewController.view];
 		[locationUpdater updateLocation];
-        
-        self.window.rootViewController = tabBarController;
-        [self.window makeKeyAndVisible];
 	}
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
 }
 
 -(LocationUpdater *) getLocationUpdatorInstance{

@@ -32,7 +32,7 @@
 		cell.couponIndex = indexPath.row;
 	}
 		
-	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	[cell setUIViewController:self];
 	return cell;
 	

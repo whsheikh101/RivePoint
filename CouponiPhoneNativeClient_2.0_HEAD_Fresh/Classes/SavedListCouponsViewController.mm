@@ -34,7 +34,7 @@
 		coupon.poiId = [NSString stringWithFormat:@"%d", appDelegate.poiId];
 		[cell setCouponContent:coupon];		
 	}
-	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	//cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	[cell setUIViewController:self];
 	cell.numberOfPOICoupons = [savedCouponsArray count];
 	cell.couponIndex = indexPath.row;
