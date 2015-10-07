@@ -215,6 +215,8 @@
 //        [appDelegate.progressHud removeFromSuperview];
         NSLog(@"LocationUpdated errorFindingLocation");
         [appDelegate removeLoadingViewFromSuperView];
+        [appDelegate hideActivityViewer];
+
 		[LocationUtil gpsOff:locationManager];
 //		[appDelegate showAlert:NSLocalizedString(KEY_ERROR_LOCATION_UPDATE_FAILURE,EMPTY_STRING) delegate:self];
         [appDelegate showAlert:NSLocalizedString(KEY_ERROR_LOCATION_UPDATE_FAILURE,EMPTY_STRING) delegate:self];

@@ -122,7 +122,7 @@
 -(void)showShareDialog:(NSString *)errorText{
 	appDelegate =  (RivePointAppDelegate *) [[UIApplication sharedApplication] delegate];
 	UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Share Coupon" message:@"Please provide email to share.\n\n\n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Submit", nil];
-	
+	theAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
 	UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(25.0, 88.0, 225.0, 25.0)];
 	//[bslider setBackgroundColor:[UIColor blueColor]];
 	email = myTextField;
@@ -139,7 +139,8 @@
 		errorLabel.text =errorText;
 		[theAlert addSubview:errorLabel];
 	}
-	[theAlert addSubview:myTextField];
+    myTextField = [theAlert textFieldAtIndex:0];
+	//[theAlert addSubview:myTextField];
 	[theAlert show];
 	[myTextField becomeFirstResponder];
 	[theAlert release];
