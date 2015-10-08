@@ -33,7 +33,7 @@
 }
 +(void) gpsOn:(CLLocationManager *)locationManager refDelegate:(LocationUpdater *) refDelegate{
 	RivePointAppDelegate *appDelegate = (RivePointAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
+	[locationManager requestWhenInUseAuthorization];
 	if(locationManager.locationServicesEnabled){
         
         NSLog(@"LocationUtil Update Call");

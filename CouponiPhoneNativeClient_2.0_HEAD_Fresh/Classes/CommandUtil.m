@@ -453,7 +453,7 @@
 	[params appendString:[XMLUtil getStringCommandParam:@"rcvrEmail" paramValue:rcvrEmail ]];
 	
 	[params appendString:[XMLUtil getStringCommandParam:USER_ID_PARAMETER paramValue:appDelegate.setting.subsId ]];
-	
+	//[params appendString:[XMLUtil getStringCommandParam:USER_ID_PARAMETER paramValue:@"98126" ]];
 	
 	[params appendString:[XMLUtil getStringCommandParam:@"couponId" paramValue:couponId ]];
 	

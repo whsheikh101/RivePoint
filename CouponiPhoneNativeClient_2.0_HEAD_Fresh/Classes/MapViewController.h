@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "CustomAnotation.h"
+#import "MapPoint.h"
 
 @class RivePointAppDelegate;
 @class ListCouponsViewController;

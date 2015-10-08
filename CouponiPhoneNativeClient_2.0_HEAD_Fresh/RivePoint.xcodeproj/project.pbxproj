@@ -401,6 +401,7 @@
 		49E900C80FB2B1D400F33C4A /* LabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E900C70FB2B1D400F33C4A /* LabelViewCell.m */; };
 		49E901650FB2CED900F33C4A /* SponsoredViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E901640FB2CED900F33C4A /* SponsoredViewCell.m */; };
 		49EEB71712634B0B00B54613 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EEB71612634B0B00B54613 /* MapKit.framework */; };
+		7C3EF08C1BC69DC200F8F5BF /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EF08B1BC69DC200F8F5BF /* MapPoint.m */; settings = {ASSET_TAGS = (); }; };
 		AEA02AD40F3E69DE00F33198 /* ListCouponsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA02AD30F3E69DE00F33198 /* ListCouponsView.xib */; };
 		AEA02ADB0F3E6A8300F33198 /* ListCouponsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEA02ADA0F3E6A8300F33198 /* ListCouponsViewController.mm */; };
 		AEA02AE00F3E6BCD00F33198 /* CouponViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA02ADF0F3E6BCD00F33198 /* CouponViewCell.m */; };
@@ -998,6 +999,8 @@
 		49E901630FB2CED900F33C4A /* SponsoredViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsoredViewCell.h; sourceTree = "<group>"; };
 		49E901640FB2CED900F33C4A /* SponsoredViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsoredViewCell.m; sourceTree = "<group>"; };
 		49EEB71612634B0B00B54613 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7C3EF08A1BC69DC200F8F5BF /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		7C3EF08B1BC69DC200F8F5BF /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEA02AD30F3E69DE00F33198 /* ListCouponsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCouponsView.xib; sourceTree = "<group>"; };
 		AEA02AD90F3E6A8300F33198 /* ListCouponsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCouponsViewController.h; sourceTree = "<group>"; };
@@ -1559,6 +1562,8 @@
 				499CE1A10FC153E800D6172F /* UIViewControllerExtended.h */,
 				497B54E4102C15B400AEBEE6 /* CustomWindow.h */,
 				497B54E5102C15B400AEBEE6 /* CustomWindow.m */,
+				7C3EF08A1BC69DC200F8F5BF /* MapPoint.h */,
+				7C3EF08B1BC69DC200F8F5BF /* MapPoint.m */,
 				49DAF9531275718100E27B29 /* MapViewController.h */,
 				49DAF9541275718100E27B29 /* MapViewController.m */,
 				4982CD61129D33FF002E4C73 /* MapButtonController.h */,
@@ -2513,6 +2518,7 @@
 				497C0C790FFB22320062F06E /* COTDCouponList.m in Sources */,
 				498040100FFB36E400D2CA07 /* PoiFinderNew.m in Sources */,
 				497C9D3C0FFCD0FA00BE8C8A /* ExternalPoiViewController.m in Sources */,
+				7C3EF08C1BC69DC200F8F5BF /* MapPoint.m in Sources */,
 				4984CC710FFDE3DA0086023A /* MyCouponsViewController.m in Sources */,
 				49804A820FFE2D8600398358 /* SharedCoupon.m in Sources */,
 				497D345B1001B84E000B98E5 /* SharedCouponInbox.m in Sources */,

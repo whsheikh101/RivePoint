@@ -192,6 +192,7 @@
 //	[self makeMapObject];
 	refOfControllerForCallback = refController;
 	isStartup = NO;
+    [locationManager requestWhenInUseAuthorization];
 	[LocationUtil gpsOn:locationManager refDelegate:self];
 	
 }

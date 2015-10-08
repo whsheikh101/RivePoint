@@ -113,9 +113,9 @@
         
 //		customAnotation = [self getAnnotation:[NSString stringWithFormat:@"%@ (%@)", poi.name,poi.couponCount] poiId:0 latitude:[poi.latitude doubleValue] longitude:[poi.longitude doubleValue]];
         
-        customAnotation = [self getAnnotation:_pName andSubtilte:_pAddres poiId:0 latitude:[poi.latitude doubleValue] longitude:[poi.longitude doubleValue]];
-		
-		[annotaionArray addObject:customAnotation];
+//        customAnotation = [self getAnnotation:_pName andSubtilte:_pAddres poiId:0 latitude:[poi.latitude doubleValue] longitude:[poi.longitude doubleValue]];
+        MapPoint *dealPin = [[MapPoint alloc] initWithCoordinate:CLLocationCoordinate2DMake([poi.latitude doubleValue], [poi.longitude doubleValue]) title:_pName subtitle:_pAddres with:0];
+		[annotaionArray addObject:dealPin];
 		
 		[mapView setRegion:mapRegion animated:YES];
 				
@@ -242,12 +242,13 @@
             [button addTarget:self action:@selector(showCouponListViewController:)  forControlEvents:UIControlEventTouchUpInside];
             annotationView.rightCalloutAccessoryView = button;
         }
+        /*
             UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,300,50)];
             
             UILabel * lblMain = [[UILabel alloc]initWithFrame:CGRectMake(0,-7, 250, 20)];
             lblMain.backgroundColor = [UIColor clearColor];
             lblMain.font = [UIFont boldSystemFontOfSize:14];
-            lblMain.textColor =[UIColor whiteColor];
+            lblMain.textColor =[UIColor blackColor];
             lblMain.text = ann.title;
             [leftCAV addSubview:lblMain];
             [lblMain release];
@@ -255,7 +256,7 @@
             UILabel * lblSub = [[UILabel alloc]initWithFrame:CGRectMake(0, 6, 250, 35)];
             lblSub.backgroundColor = [UIColor clearColor];
             lblSub.font = [UIFont systemFontOfSize:11];
-            lblSub.textColor = [UIColor whiteColor];
+            lblSub.textColor = [UIColor blackColor];
             lblSub.lineBreakMode = UILineBreakModeWordWrap;
             lblSub.numberOfLines = 2;
             lblSub.text = ann.subtitle;
@@ -263,6 +264,7 @@
             [lblSub release];
             annotationView.leftCalloutAccessoryView = leftCAV;
         [leftCAV release];
+         */
         
     }
 	return annotationView;

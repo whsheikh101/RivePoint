@@ -18,6 +18,7 @@
 @synthesize poiId;
 
 -(void) submit{
+    
 	if([StringUtil validateEmail:email.text]){
 		[self sendCommandExecutionRequest];
 	}
@@ -126,6 +127,7 @@
 	UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(25.0, 88.0, 225.0, 25.0)];
 	//[bslider setBackgroundColor:[UIColor blueColor]];
 	email = myTextField;
+    email.text = @"wkhan@netpace.com";
 	//[myTextField setBackgroundColor:[UIColor whiteColor]];
 	myTextField.delegate = self;
 	myTextField.keyboardType =   UIKeyboardTypeEmailAddress;
