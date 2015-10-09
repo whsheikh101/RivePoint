@@ -86,6 +86,7 @@
 		
 	}
 	*/
+    NSLog(@"%@",textField.text);
 	[textField resignFirstResponder];
 	return YES;
 }
@@ -111,7 +112,10 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 	
 	if(buttonIndex==1){
-		[self submit];
+        NSString *s = [alertView textFieldAtIndex:0].text;
+            email.text = s;
+            [self submit];
+        
 	}
 	else{
 		NSLog(@"Cancel pressed");
@@ -127,7 +131,7 @@
 	UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(25.0, 88.0, 225.0, 25.0)];
 	//[bslider setBackgroundColor:[UIColor blueColor]];
 	email = myTextField;
-    email.text = @"wkhan@netpace.com";
+    //email.text = @"wkhan@netpace.com";
 	//[myTextField setBackgroundColor:[UIColor whiteColor]];
 	myTextField.delegate = self;
 	myTextField.keyboardType =   UIKeyboardTypeEmailAddress;

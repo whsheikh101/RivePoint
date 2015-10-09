@@ -10,6 +10,7 @@
 #import "RivePointAppDelegate.h"
 #import "XMLUtil.h"
 #import "XMLPostRequest.h"
+#import "TPKeyboardAvoidingScrollView.h"
 
 @interface RegisterViewController : UIViewController<UIActionSheetDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate,UIScrollViewDelegate,XMLPostRequestDelegates,UIAlertViewDelegate>
 {

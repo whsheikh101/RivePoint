@@ -46,6 +46,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    tfEmail.autocorrectionType = UITextAutocorrectionTypeNo;
+    tfPaswrd.autocorrectionType = UITextAutocorrectionTypeNo;
     appDelegate = (RivePointAppDelegate *)[UIApplication sharedApplication].delegate;
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
     [GeneralUtil setRivepointLogo:self.navigationItem];

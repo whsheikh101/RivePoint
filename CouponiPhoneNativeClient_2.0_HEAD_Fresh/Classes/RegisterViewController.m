@@ -219,6 +219,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    tfEmail.autocorrectionType = UITextAutocorrectionTypeNo;
+    tfPaswrd.autocorrectionType = UITextAutocorrectionTypeNo;
+    tfName.autocorrectionType = UITextAutocorrectionTypeNo;
+    tfAddress.autocorrectionType = UITextAutocorrectionTypeNo;
+    tfOcupation.autocorrectionType = UITextAutocorrectionTypeNo;
+    tfInterest.autocorrectionType = UITextAutocorrectionTypeNo;
     // Do any additional setup after loading the view from its nib.
     appDelegate = (RivePointAppDelegate *)[UIApplication sharedApplication].delegate;
     [GeneralUtil setRivepointLogo:self.navigationItem];
@@ -639,6 +645,7 @@ UIImage* rotateUIImage(const UIImage* src, float angleDegrees)  {
 }
 
 #pragma mark UITextFieldDelegates
+/*
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
     [self hideKeyBoard];
@@ -697,7 +704,7 @@ UIImage* rotateUIImage(const UIImage* src, float angleDegrees)  {
     
     return YES;
 }
-
+*/
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     NSInteger textLength = 0;

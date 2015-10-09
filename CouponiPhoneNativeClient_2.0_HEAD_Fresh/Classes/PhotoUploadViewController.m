@@ -390,6 +390,7 @@
 {
     UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Please enter email address!" message:@"\n\n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
     tfEmail = [[UITextField alloc] initWithFrame:CGRectMake(12.0, 45.0, 260.0, 25.0)];
+    myAlertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     myAlertView.tag = 1606;
     tfEmail.placeholder=@"Enter you recipent email";
     [tfEmail becomeFirstResponder];

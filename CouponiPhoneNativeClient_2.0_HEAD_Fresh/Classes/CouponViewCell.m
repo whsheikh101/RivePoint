@@ -279,7 +279,7 @@
                 cvController.currCoupon = couponRef;
                 cvController.curPOI = poi;
                 cvController.numberOfPOICoupons = numberOfPOICoupons;
-                cvController.hidesBottomBarWhenPushed = YES;
+                cvController.hidesBottomBarWhenPushed = NO;
                 appDelegate.couponId = [couponRef.couponId intValue];
                 appDelegate.couponIndex = self.couponIndex;
                 [(ListCouponsViewController *)viewController dontReturnToRoot];

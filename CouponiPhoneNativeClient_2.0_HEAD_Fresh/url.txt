@@ -1,1 +1,1 @@
-http://qa1.rivepoint.com:8080/coupon-server/
+http://app.rivepoint.com/coupon-server/

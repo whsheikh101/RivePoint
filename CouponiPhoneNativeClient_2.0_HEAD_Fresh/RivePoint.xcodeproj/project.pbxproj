@@ -401,6 +401,11 @@
 		49E900C80FB2B1D400F33C4A /* LabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E900C70FB2B1D400F33C4A /* LabelViewCell.m */; };
 		49E901650FB2CED900F33C4A /* SponsoredViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E901640FB2CED900F33C4A /* SponsoredViewCell.m */; };
 		49EEB71712634B0B00B54613 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EEB71612634B0B00B54613 /* MapKit.framework */; };
+		7C3DA0A41BC79909000D8885 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0A31BC79909000D8885 /* CustomIOSAlertView.m */; settings = {ASSET_TAGS = (); }; };
+		7C3DA0AE1BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0A71BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m */; settings = {ASSET_TAGS = (); }; };
+		7C3DA0AF1BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0A91BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		7C3DA0B01BC7E29C000D8885 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0AB1BC7E29C000D8885 /* TPKeyboardAvoidingTableView.m */; settings = {ASSET_TAGS = (); }; };
+		7C3DA0B11BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0AD1BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; settings = {ASSET_TAGS = (); }; };
 		7C3EF08C1BC69DC200F8F5BF /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EF08B1BC69DC200F8F5BF /* MapPoint.m */; settings = {ASSET_TAGS = (); }; };
 		AEA02AD40F3E69DE00F33198 /* ListCouponsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA02AD30F3E69DE00F33198 /* ListCouponsView.xib */; };
 		AEA02ADB0F3E6A8300F33198 /* ListCouponsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEA02ADA0F3E6A8300F33198 /* ListCouponsViewController.mm */; };
@@ -999,6 +1004,16 @@
 		49E901630FB2CED900F33C4A /* SponsoredViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsoredViewCell.h; sourceTree = "<group>"; };
 		49E901640FB2CED900F33C4A /* SponsoredViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsoredViewCell.m; sourceTree = "<group>"; };
 		49EEB71612634B0B00B54613 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7C3DA0A21BC79909000D8885 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
+		7C3DA0A31BC79909000D8885 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
+		7C3DA0A61BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		7C3DA0A71BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		7C3DA0A81BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		7C3DA0A91BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		7C3DA0AA1BC7E29C000D8885 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		7C3DA0AB1BC7E29C000D8885 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		7C3DA0AC1BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		7C3DA0AD1BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		7C3EF08A1BC69DC200F8F5BF /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		7C3EF08B1BC69DC200F8F5BF /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1312,6 +1327,8 @@
 		4901A8690F5ECF83001FA3FC /* coupon */ = {
 			isa = PBXGroup;
 			children = (
+				7C3DA0A21BC79909000D8885 /* CustomIOSAlertView.h */,
+				7C3DA0A31BC79909000D8885 /* CustomIOSAlertView.m */,
 				C678F200115116B6008C4333 /* CouponDetailViewController.h */,
 				C678F201115116B6008C4333 /* CouponDetailViewController.m */,
 				49790E7A100CC7A10063811B /* DetailView.h */,
@@ -1547,6 +1564,14 @@
 		498DD1450F79276A00D1F8FE /* general */ = {
 			isa = PBXGroup;
 			children = (
+				7C3DA0A61BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.h */,
+				7C3DA0A71BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m */,
+				7C3DA0A81BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.h */,
+				7C3DA0A91BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m */,
+				7C3DA0AA1BC7E29C000D8885 /* TPKeyboardAvoidingTableView.h */,
+				7C3DA0AB1BC7E29C000D8885 /* TPKeyboardAvoidingTableView.m */,
+				7C3DA0AC1BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				7C3DA0AD1BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 				3847D1E10F6FCBC900F5BE4E /* email */,
 				4984CC6F0FFDE3D90086023A /* MyCouponsViewController.h */,
 				4984CC700FFDE3DA0086023A /* MyCouponsViewController.m */,
@@ -2503,6 +2528,7 @@
 				4985495B0F600DDC00BA8AC1 /* BrowseVendorController.m in Sources */,
 				4988D9BE0F681D6B009B2B68 /* SearchVendorController.m in Sources */,
 				49809A740F71536700514465 /* User.m in Sources */,
+				7C3DA0B11BC7E29C000D8885 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				3829AC770F7A7E7900DD0B43 /* CouponManager.m in Sources */,
 				3829AC7A0F7A7E8700DD0B43 /* PoiManager.m in Sources */,
 				492255850F7A7E0E00B4B16F /* NSExtendedString.m in Sources */,
@@ -2553,6 +2579,7 @@
 				49CD65811275ADEE0023DF5F /* CustomAnotation.m in Sources */,
 				4982CD64129D33FF002E4C73 /* MapButtonController.m in Sources */,
 				49CA256E13797B7500EAE62B /* GetLoyaltyPOISController.m in Sources */,
+				7C3DA0AE1BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				490FCF85139CCA8200D63297 /* QRCodeViewController.mm in Sources */,
 				4937B20215FF10660027D262 /* ReviewRatingViewController.m in Sources */,
 				494CE83E16002AA700146319 /* ReviewComment.m in Sources */,
@@ -2572,6 +2599,7 @@
 				49CD886F160324C700DFEDD6 /* NSString+SBJSON.m in Sources */,
 				49CD8870160324C700DFEDD6 /* SBJSON.m in Sources */,
 				49CD8871160324C700DFEDD6 /* SBJsonBase.m in Sources */,
+				7C3DA0AF1BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				49CD8872160324C700DFEDD6 /* SBJsonParser.m in Sources */,
 				49CD8873160324C700DFEDD6 /* SBJsonWriter.m in Sources */,
 				49CD8874160324C700DFEDD6 /* MBProgressHUD.m in Sources */,
@@ -2596,7 +2624,9 @@
 				49CD888C160324C700DFEDD6 /* NSString+UUID.m in Sources */,
 				49CD888D160324C700DFEDD6 /* SA_OAuthTwitterController.m in Sources */,
 				49CD888E160324C700DFEDD6 /* SA_OAuthTwitterEngine.m in Sources */,
+				7C3DA0B01BC7E29C000D8885 /* TPKeyboardAvoidingTableView.m in Sources */,
 				49CD8890160324C700DFEDD6 /* TwitterHelper.m in Sources */,
+				7C3DA0A41BC79909000D8885 /* CustomIOSAlertView.m in Sources */,
 				49CD88941603252B00DFEDD6 /* CustomImage.m in Sources */,
 				49266B8D16130AE8007BA2BA /* RedeemViewController.m in Sources */,
 				49CD4CDA161422940050FB5D /* FavoritePoiUtils.m in Sources */,
