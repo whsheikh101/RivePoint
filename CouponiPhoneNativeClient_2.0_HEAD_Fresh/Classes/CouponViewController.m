@@ -501,6 +501,8 @@
 	UIImage *reflectedImage;
 	
 	// disable user interaction during the flip
+    //containerView.layer.cornerRadius = 8;
+    //containerView.layer.masksToBounds = YES;
 	containerView.userInteractionEnabled = NO;
 	flipIndicatorButton.userInteractionEnabled = NO;
 	

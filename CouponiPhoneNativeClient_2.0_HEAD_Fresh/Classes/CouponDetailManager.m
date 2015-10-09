@@ -9,6 +9,7 @@
 #import "CouponDetailManager.h"
 #import "RivepointConstants.h"
 #import "CustomIOSAlertView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation CouponDetailManager
 
@@ -24,14 +25,17 @@
     // Here we need to pass a full frame
     CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
     
-    cdvController.view.backgroundColor = [UIColor blackColor];
+    //cdvController.view.backgroundColor = [UIColor blackColor];
 //    cdvController.view.frame = CGRectMake(18.0, 80.0, 260.0, 200.0);
     cdvController.view.frame = CGRectMake( 0, 0, 290, 200);
+    cdvController.view.layer.cornerRadius = 8;
+    cdvController.view.layer.masksToBounds = YES;
     [cdvController setDetails:coupon withPoi:poi];
 
     //UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
     //demoView  = cdvController.view;
     // Add some custom content to the alert view
+    alertView.backgroundColor = [UIColor blackColor];
     [alertView setContainerView:cdvController.view];
     
     // Modify the parameters

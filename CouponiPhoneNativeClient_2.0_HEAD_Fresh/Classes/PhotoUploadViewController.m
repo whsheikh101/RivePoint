@@ -445,6 +445,7 @@
     {
         if (buttonIndex == 1)
         {
+            tfEmail.text = [alertView textFieldAtIndex:0].text;
             NSString * _email = tfEmail.text;
             if ([StringUtil validateEmail:tfEmail.text]) {
                 

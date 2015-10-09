@@ -128,7 +128,7 @@
 	appDelegate =  (RivePointAppDelegate *) [[UIApplication sharedApplication] delegate];
 	UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"Share Coupon" message:@"Please provide email to share.\n\n\n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Submit", nil];
 	theAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-	UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(25.0, 88.0, 225.0, 25.0)];
+	UITextField *myTextField = [[UITextField alloc] initWithFrame:CGRectMake(12.0, 45.0, 260.0, 25.0)];
 	//[bslider setBackgroundColor:[UIColor blueColor]];
 	email = myTextField;
     //email.text = @"wkhan@netpace.com";
