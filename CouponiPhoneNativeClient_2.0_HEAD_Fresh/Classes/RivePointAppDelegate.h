@@ -24,8 +24,6 @@
 #import "SA_OAuthTwitterEngine.h"
 #import "Facebook.h"
 
-
-
 @class MainViewController;
 @class ListCouponsViewController;
 @class CouponDetailViewController;

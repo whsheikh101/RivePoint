@@ -59,7 +59,6 @@
     return [[[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate: delegate] autorelease];
 }
 
-//https://api.twitter.com/oauth/access_token
 
 - (SA_OAuthTwitterEngine *) initOAuthWithDelegate: (NSObject *) delegate {
     if (self = (id) [super initWithDelegate: delegate]) {
@@ -151,6 +150,15 @@
 	
 	if (self.pin.length) token.pin = self.pin;
     [request setHTTPMethod: @"POST"];
+    
+    /*
+     Added oauth_callback param to the request, which is required for OOB (out-of-band) authentication, without which 
+     twitter does not return a pin but redirects to the callback url set in the app on twitter.com, hence failing the authentication.
+     https://dev.twitter.com/docs/auth/pin-based-authorization
+    */
+	NSMutableArray *params =  [[NSMutableArray alloc] initWithArray:request.parameters];
+	[params addObject:[[OARequestParameter alloc] initWithName:@"oauth_callback" value:@"oob"]];
+	request.parameters = params;
 	
     OADataFetcher				*fetcher = [[[OADataFetcher alloc] init] autorelease];	
     [fetcher fetchDataWithRequest: request delegate: self didFinishSelector: success didFailSelector: fail];

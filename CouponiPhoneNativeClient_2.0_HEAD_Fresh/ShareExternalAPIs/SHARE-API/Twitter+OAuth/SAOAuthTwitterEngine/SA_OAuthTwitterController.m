@@ -90,7 +90,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 
 
 - (id) initWithEngine: (SA_OAuthTwitterEngine *) engine andOrientation:(UIInterfaceOrientation)theOrientation {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		self.engine = engine;
 		if (!engine.OAuthSetup) [_engine requestRequestToken];
 		self.orientation = theOrientation;
@@ -99,13 +99,12 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 		if (UIInterfaceOrientationIsLandscape( self.orientation ) )
 			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 32, 480, 288)];
 		else
-			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 64, 320, 416)];
+			_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 44, 320, 416)];
 		
 		_webView.alpha = 0.0;
 		_webView.delegate = self;
 		_webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-		if ([_webView respondsToSelector: @selector(setDetectsPhoneNumbers:)]) [(id) _webView setDetectsPhoneNumbers: NO];
-		if ([_webView respondsToSelector: @selector(setDataDetectorTypes:)]) [(id) _webView setDataDetectorTypes: 0];
+		if ([_webView respondsToSelector: @selector(setDataDetectorTypes:)]) [(UIWebView *) _webView setDataDetectorTypes: 0];
 		
 		NSURLRequest			*request = _engine.authorizeURLRequest;
 		[_webView loadRequest: request];
@@ -147,10 +146,9 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 		
 		_navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, 480, 32)] autorelease];
 	} else {
-		self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 44, 320, 416)] autorelease];
-		_backgroundView.frame =  CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height);
-        [_backgroundView sizeToFit];
-        _navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 20, 320, 44)] autorelease];
+		self.view = [[[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 460)] autorelease];	
+		_backgroundView.frame =  CGRectMake(0, 44, 320, 416);
+		_navBar = [[[UINavigationBar alloc] initWithFrame: CGRectMake(0, 0, 320, 44)] autorelease];
 	}
 	_navBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
 	_backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -172,7 +170,7 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 	label.text = NSLocalizedString(@"Please Wait…", nil);
 	label.backgroundColor = [UIColor clearColor];
 	label.textColor = [UIColor whiteColor];
-	label.textAlignment = UITextAlignmentCenter;
+	label.textAlignment = NSTextAlignmentCenter;
 	label.font = [UIFont boldSystemFontOfSize: 15];
 	[_blockerView addSubview: label];
 	
@@ -342,7 +340,7 @@ Ugly. I apologize for its inelegance. Bleah.
 	NSData				*data = [request HTTPBody];
 	char				*raw = data ? (char *) [data bytes] : "";
 	
-	if (raw && strstr(raw, "cancel=")) {
+	if (raw && (strstr(raw, "cancel=") || strstr(raw, "deny="))) {
 		[self denied];
 		return NO;
 	}
