@@ -135,7 +135,7 @@
     NSString * userSubsId;
     
 }
-
+@property (strong, nonatomic) UIAlertView *alert;
 @property (nonatomic , retain) MBProgressHUD * progressHud;
 @property (nonatomic , retain) SA_OAuthTwitterEngine * twitter;
 @property (nonatomic , retain) Facebook * facebook;
@@ -246,5 +246,6 @@
 -(void) fetchUserLogedInId;
 -(void) gotoFirstPOITabFromController:(UINavigationController *)controller;
 -(void) removeLoadingViewFromSuperView;
+-(BOOL) networkStatus;
 
 @end

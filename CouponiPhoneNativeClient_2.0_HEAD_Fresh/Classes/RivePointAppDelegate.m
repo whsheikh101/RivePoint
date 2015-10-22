@@ -29,6 +29,7 @@
 #import "mach/mach.h"
 #import "MainViewController.h"
 #import "SearchVendorController.h"
+#import "Reachability.h"
 
 @implementation RivePointAppDelegate
 
@@ -257,61 +258,72 @@ void uncaughtExceptionHandler(NSException *e) {
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
-    // Add the tab bar controller's current view as a subview of the window
-    _facebook = [[Facebook alloc]initWithAppId:@"219979578145441" andDelegate:self];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:@"FBAccessTokenKey"] 
-        && [defaults objectForKey:@"FBExpirationDateKey"]) {
-        _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
-        _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-    }
-	
-    _twitter = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate: self];
-  	_twitter.consumerKey = TWITTER_CONSUMER_KEY;
-	_twitter.consumerSecret = TWITTER_CONSUMER_SECRATE;
-    self.shouldBackToShare = NO;
-	self.shouldNotShareAlert = NO;
-    [self fetchUserLogedInId];
-	[self loadRivepointServerURLString];
-	[self createCouponPreviewImageDictionary];
-	[self createLogoDictionary];
-    tabBarController.delegate = (id)self;
-	categoryNames = [[NSArray alloc] initWithObjects:@"Coffee Shops",@"American",@"Chinese",@"Italian", @"Fast Food", @"Mexican",@"Snacks And Pizza", nil];
-	categoryIcons = [[NSArray alloc] initWithObjects:@"coffee.png",@"american.png",@"chinese.png",@"italian.png",@"fastfood.png",@"mexican.png",@"snacks.png",@"Automotive.png", nil];
-		
-	optionNames = [[NSArray alloc] initWithObjects:@"Saved Coupons",@"Shared Coupons",@"Saved Loyalty Coupons",@"Shared Loyalty Coupons",@"Delete All Shared",@"Delete All Saved", nil];
-	optionIcons = [[NSArray alloc] initWithObjects:@"save-menu.png",@"share-menu.png",@"loilttyIphoneIcon.png",@"loilttyIphoneIcon.png",@"empty-shared-menu.png",@"delete-save-menu.png", nil];
-
-	[window addSubview:navController.view];
-    [window addSubview:tabBarController.view];
-	
-	//initialize instance variables
-	[self initializeComponents];
-	
-	
-	//initialize settings from db
-	[self initializeSetting];
- 
-	if([setting.subsId isEqualToString:@"-1"]){
-		waitScreenView = [[ProcessViewController alloc] initWithNibName:@"Processing" bundle:nil];
-		[window addSubview:waitScreenView.view];
-		[window bringSubviewToFront:waitScreenView.view];
-	}
-    NSLog(@"Location:%hhd",shouldUpdateLocationAtStartup);
-	if(shouldUpdateLocationAtStartup){
+    if (self.networkStatus) {
+        if ([self checkApplicationVersion]){
+            self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            self.alert.tag = 1;
+            [self.alert show];
+        }
+        // Add the tab bar controller's current view as a subview of the window
+        _facebook = [[Facebook alloc]initWithAppId:@"219979578145441" andDelegate:self];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if ([defaults objectForKey:@"FBAccessTokenKey"]
+            && [defaults objectForKey:@"FBExpirationDateKey"]) {
+            _facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+            _facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+        }
         
-		[FileUtil resetUserDefaults];
-		tabBarController.selectedViewController = settingNavController;
-		locationUpdater = [[LocationUpdater alloc] init];
-		navController = getCouponsNavController;
-		
-		startupSettingsViewController = [[StartupSettingsViewController alloc] initWithNibName:@"Processing" bundle:nil];
-		[window addSubview:startupSettingsViewController.view];
-		[window bringSubviewToFront:startupSettingsViewController.view];
-		[locationUpdater updateLocation];
-	}
-    self.window.rootViewController = tabBarController;
-    [self.window makeKeyAndVisible];
+        _twitter = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate: self];
+        _twitter.consumerKey = TWITTER_CONSUMER_KEY;
+        _twitter.consumerSecret = TWITTER_CONSUMER_SECRATE;
+        self.shouldBackToShare = NO;
+        self.shouldNotShareAlert = NO;
+        [self fetchUserLogedInId];
+        [self loadRivepointServerURLString];
+        [self createCouponPreviewImageDictionary];
+        [self createLogoDictionary];
+        tabBarController.delegate = (id)self;
+        categoryNames = [[NSArray alloc] initWithObjects:@"Coffee Shops",@"American",@"Chinese",@"Italian", @"Fast Food", @"Mexican",@"Snacks And Pizza", nil];
+        categoryIcons = [[NSArray alloc] initWithObjects:@"coffee.png",@"american.png",@"chinese.png",@"italian.png",@"fastfood.png",@"mexican.png",@"snacks.png",@"Automotive.png", nil];
+        
+        optionNames = [[NSArray alloc] initWithObjects:@"Saved Coupons",@"Shared Coupons",@"Saved Loyalty Coupons",@"Shared Loyalty Coupons",@"Delete All Shared",@"Delete All Saved", nil];
+        optionIcons = [[NSArray alloc] initWithObjects:@"save-menu.png",@"share-menu.png",@"loilttyIphoneIcon.png",@"loilttyIphoneIcon.png",@"empty-shared-menu.png",@"delete-save-menu.png", nil];
+        
+        [window addSubview:navController.view];
+        [window addSubview:tabBarController.view];
+        
+        //initialize instance variables
+        [self initializeComponents];
+        
+        
+        //initialize settings from db
+        [self initializeSetting];
+        
+        if([setting.subsId isEqualToString:@"-1"]){
+            waitScreenView = [[ProcessViewController alloc] initWithNibName:@"Processing" bundle:nil];
+            [window addSubview:waitScreenView.view];
+            [window bringSubviewToFront:waitScreenView.view];
+        }
+        NSLog(@"Location:%hhd",shouldUpdateLocationAtStartup);
+        if(shouldUpdateLocationAtStartup){
+            
+            [FileUtil resetUserDefaults];
+            tabBarController.selectedViewController = settingNavController;
+            locationUpdater = [[LocationUpdater alloc] init];
+            navController = getCouponsNavController;
+            
+            startupSettingsViewController = [[StartupSettingsViewController alloc] initWithNibName:@"Processing" bundle:nil];
+            [window addSubview:startupSettingsViewController.view];
+            [window bringSubviewToFront:startupSettingsViewController.view];
+            [locationUpdater updateLocation];
+        }
+        self.window.rootViewController = tabBarController;
+        [self.window makeKeyAndVisible];
+        
+    }
+    
+    
+
 }
 
 -(LocationUpdater *) getLocationUpdatorInstance{
@@ -477,10 +489,10 @@ void uncaughtExceptionHandler(NSException *e) {
 ////	browseScreenZIPBarButton.title = s.zip;
 //}
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-		NSLog(@"OK pressed");
-		
-}
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//		NSLog(@"OK pressed");
+//		
+//}
 
 //-(void) updateZipCode:(GeocodeAddress*) code{
 //	
@@ -942,6 +954,69 @@ void uncaughtExceptionHandler(NSException *e) {
     else
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:k_Tweet_Fail object:nil userInfo:nil];
+    }
+}
+
+
+#pragma mark - Check For Force Update
+-(BOOL)checkApplicationVersion{
+    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/lookup?id=03276338"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    //send it synchronous
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[responseString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+    
+    NSString *itunesVersion;
+    NSArray *configData = [json valueForKey:@"results"];
+    if (configData == nil) {
+        if (configData <= 0) {
+            return NO;
+        }else{
+            for (id config in configData){
+                itunesVersion = [config valueForKey:@"version"];
+            }
+            
+            NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];
+            NSString *version = infoDictionary[@"CFBundleShortVersionString"];
+            
+            if ([version doubleValue]>=[itunesVersion doubleValue]) {
+                return NO;
+            }
+            else{
+                return YES;
+            }
+        }
+        
+    }else{
+        return NO;
+    }
+    
+}
+/*
+#pragma mark - UIAlertView Delegate
+-(void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (actionSheet.tag == 1) {
+        NSString *iTunesLink = @"itms-apps://itunes.apple.com/app/id303276338";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+    }
+    
+}*/
+
+//Checking the network status.....
+- (BOOL)networkStatus {
+    Reachability *reach = [Reachability reachabilityForInternetConnection];
+    NetworkStatus network = [reach currentReachabilityStatus];
+    if (network == NotReachable) {
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"The Internet connection appears to be offline." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        //alert.tag = InternetAlertViewTag;
+        [alert show];
+        return NO;
+    } else {
+        return YES;
     }
 }
 

@@ -56,18 +56,14 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-	
-	
-		int statusCode = [ response statusCode ];
-		if (statusCode == 200)
-		{
-			[xmlResponse setLength: 0];
-		}else {
-			[self cancelRequest];
-			[((PoiFinderNew *)callerReference) communicationError:@""];
-		}
-		
-	
+    int statusCode = [ response statusCode ];
+    if (statusCode == 200)
+    {
+        [xmlResponse setLength: 0];
+    }else {
+        [self cancelRequest];
+        [((PoiFinderNew *)callerReference) communicationError:@""];
+    }
 }
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
