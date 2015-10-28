@@ -258,7 +258,7 @@ void uncaughtExceptionHandler(NSException *e) {
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
-    if (self.networkStatus) {
+    if ([self networkStatus]) {
         if ([self checkApplicationVersion]){
             self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             self.alert.tag = 1;
@@ -295,7 +295,6 @@ void uncaughtExceptionHandler(NSException *e) {
         //initialize instance variables
         [self initializeComponents];
         
-        
         //initialize settings from db
         [self initializeSetting];
         
@@ -319,11 +318,7 @@ void uncaughtExceptionHandler(NSException *e) {
         }
         self.window.rootViewController = tabBarController;
         [self.window makeKeyAndVisible];
-        
     }
-    
-    
-
 }
 
 -(LocationUpdater *) getLocationUpdatorInstance{
@@ -960,7 +955,7 @@ void uncaughtExceptionHandler(NSException *e) {
 
 #pragma mark - Check For Force Update
 -(BOOL)checkApplicationVersion{
-    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/lookup?id=03276338"];
+    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/lookup?id=303276338"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     NSURLResponse *response;
