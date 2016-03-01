@@ -258,12 +258,15 @@ void uncaughtExceptionHandler(NSException *e) {
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
-    if ([self networkStatus]) {
+   // if ([self networkStatus]) {
+        /*
         if ([self checkApplicationVersion]){
             self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             self.alert.tag = 1;
             [self.alert show];
         }
+         */
+        
         // Add the tab bar controller's current view as a subview of the window
         _facebook = [[Facebook alloc]initWithAppId:@"219979578145441" andDelegate:self];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -318,7 +321,7 @@ void uncaughtExceptionHandler(NSException *e) {
         }
         self.window.rootViewController = tabBarController;
         [self.window makeKeyAndVisible];
-    }
+   // }
 }
 
 -(LocationUpdater *) getLocationUpdatorInstance{
