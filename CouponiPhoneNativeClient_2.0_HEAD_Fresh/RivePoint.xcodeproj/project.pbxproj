@@ -196,8 +196,6 @@
 		49D0001A16EF3DB1009BC585 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6416EF3DB0009BC585 /* Default@2x.png */; };
 		49D0001B16EF3DB1009BC585 /* default_avatar_large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6516EF3DB0009BC585 /* default_avatar_large.jpg */; };
 		49D0001C16EF3DB1009BC585 /* default_avatar_large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6616EF3DB0009BC585 /* default_avatar_large@2x.png */; };
-		49D0001D16EF3DB1009BC585 /* dummy-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6716EF3DB0009BC585 /* dummy-logo.png */; };
-		49D0001E16EF3DB1009BC585 /* dummy-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6816EF3DB0009BC585 /* dummy-logo@2x.png */; };
 		49D0001F16EF3DB1009BC585 /* editButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6916EF3DB0009BC585 /* editButton.png */; };
 		49D0002016EF3DB1009BC585 /* emailButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6A16EF3DB0009BC585 /* emailButton.png */; };
 		49D0002116EF3DB1009BC585 /* emailButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0FF6B16EF3DB0009BC585 /* emailButton@2x.png */; };
@@ -375,6 +373,8 @@
 		49E900C80FB2B1D400F33C4A /* LabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E900C70FB2B1D400F33C4A /* LabelViewCell.m */; };
 		49E901650FB2CED900F33C4A /* SponsoredViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E901640FB2CED900F33C4A /* SponsoredViewCell.m */; };
 		49EEB71712634B0B00B54613 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EEB71612634B0B00B54613 /* MapKit.framework */; };
+		7C2A9B411CA41D3E00F9F394 /* dummy-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C2A9B3F1CA41D3E00F9F394 /* dummy-logo.png */; };
+		7C2A9B421CA41D3E00F9F394 /* dummy-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C2A9B401CA41D3E00F9F394 /* dummy-logo@2x.png */; };
 		7C3DA0A41BC79909000D8885 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0A31BC79909000D8885 /* CustomIOSAlertView.m */; };
 		7C3DA0AE1BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0A71BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.m */; };
 		7C3DA0AF1BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3DA0A91BC7E29C000D8885 /* TPKeyboardAvoidingScrollView.m */; };
@@ -751,8 +751,6 @@
 		49D0FF6416EF3DB0009BC585 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		49D0FF6516EF3DB0009BC585 /* default_avatar_large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default_avatar_large.jpg; sourceTree = "<group>"; };
 		49D0FF6616EF3DB0009BC585 /* default_avatar_large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_avatar_large@2x.png"; sourceTree = "<group>"; };
-		49D0FF6716EF3DB0009BC585 /* dummy-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dummy-logo.png"; sourceTree = "<group>"; };
-		49D0FF6816EF3DB0009BC585 /* dummy-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dummy-logo@2x.png"; sourceTree = "<group>"; };
 		49D0FF6916EF3DB0009BC585 /* editButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editButton.png; sourceTree = "<group>"; };
 		49D0FF6A16EF3DB0009BC585 /* emailButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailButton.png; sourceTree = "<group>"; };
 		49D0FF6B16EF3DB0009BC585 /* emailButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emailButton@2x.png"; sourceTree = "<group>"; };
@@ -924,6 +922,8 @@
 		49E901630FB2CED900F33C4A /* SponsoredViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsoredViewCell.h; sourceTree = "<group>"; };
 		49E901640FB2CED900F33C4A /* SponsoredViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsoredViewCell.m; sourceTree = "<group>"; };
 		49EEB71612634B0B00B54613 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7C2A9B3F1CA41D3E00F9F394 /* dummy-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dummy-logo.png"; sourceTree = "<group>"; };
+		7C2A9B401CA41D3E00F9F394 /* dummy-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dummy-logo@2x.png"; sourceTree = "<group>"; };
 		7C3DA0A21BC79909000D8885 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
 		7C3DA0A31BC79909000D8885 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
 		7C3DA0A61BC7E29C000D8885 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -1819,11 +1819,11 @@
 				49D0FF6416EF3DB0009BC585 /* Default@2x.png */,
 				49D0FF6516EF3DB0009BC585 /* default_avatar_large.jpg */,
 				49D0FF6616EF3DB0009BC585 /* default_avatar_large@2x.png */,
-				49D0FF6716EF3DB0009BC585 /* dummy-logo.png */,
-				49D0FF6816EF3DB0009BC585 /* dummy-logo@2x.png */,
 				49D0FF6916EF3DB0009BC585 /* editButton.png */,
 				49D0FF6A16EF3DB0009BC585 /* emailButton.png */,
 				49D0FF6B16EF3DB0009BC585 /* emailButton@2x.png */,
+				7C2A9B3F1CA41D3E00F9F394 /* dummy-logo.png */,
+				7C2A9B401CA41D3E00F9F394 /* dummy-logo@2x.png */,
 				49D0FF6C16EF3DB0009BC585 /* facebookButton.png */,
 				49D0FF6D16EF3DB0009BC585 /* facebookButton@2x.png */,
 				49D0FF6E16EF3DB0009BC585 /* fastfood.png */,
@@ -2318,6 +2318,7 @@
 				DA680C3C1BCBAA130077F2AD /* zbar-helpicons.png in Resources */,
 				49D0000F16EF3DB1009BC585 /* couponIcon-3@2x.png in Resources */,
 				49D0001016EF3DB1009BC585 /* couponIcon-4.png in Resources */,
+				7C2A9B421CA41D3E00F9F394 /* dummy-logo@2x.png in Resources */,
 				49D0001116EF3DB1009BC585 /* couponIcon-4@2x.png in Resources */,
 				49D0001216EF3DB1009BC585 /* couponIcon-5+.png in Resources */,
 				49D0001316EF3DB1009BC585 /* couponIcon-5+@2x.png in Resources */,
@@ -2331,8 +2332,6 @@
 				49D0001A16EF3DB1009BC585 /* Default@2x.png in Resources */,
 				49D0001B16EF3DB1009BC585 /* default_avatar_large.jpg in Resources */,
 				49D0001C16EF3DB1009BC585 /* default_avatar_large@2x.png in Resources */,
-				49D0001D16EF3DB1009BC585 /* dummy-logo.png in Resources */,
-				49D0001E16EF3DB1009BC585 /* dummy-logo@2x.png in Resources */,
 				49D0001F16EF3DB1009BC585 /* editButton.png in Resources */,
 				49D0002016EF3DB1009BC585 /* emailButton.png in Resources */,
 				49D0002116EF3DB1009BC585 /* emailButton@2x.png in Resources */,
@@ -2348,6 +2347,7 @@
 				49D0002B16EF3DB1009BC585 /* grayBtn-deleteAll@2x.png in Resources */,
 				49D0002C16EF3DB1009BC585 /* grayBtn-done.png in Resources */,
 				49D0002D16EF3DB1009BC585 /* grayBtn-done@2x.png in Resources */,
+				7C2A9B411CA41D3E00F9F394 /* dummy-logo.png in Resources */,
 				49D0002E16EF3DB1009BC585 /* grayBtn-edit.png in Resources */,
 				49D0002F16EF3DB1009BC585 /* grayBtn-edit@2x.png in Resources */,
 				49D0003016EF3DB1009BC585 /* grayBtn-register.png in Resources */,
