@@ -285,8 +285,19 @@
 		[base64Data autorelease];
 		imageView.animationImages = nil;
 		imageView.image = uiUmage;
-		[parentView addSubview:couponView];
-		
+        CGRect check = couponView.frame;
+        check.size.height = uiUmage.size.height;
+        [couponView setFrame:check];
+        CGRect newImageViewSize = imageView.frame;
+        newImageViewSize.size.height = uiUmage.size.height;
+        [imageView setFrame:newImageViewSize];
+        CGRect newFrame = parentView.frame;
+        newFrame.size.height = uiUmage.size.height;
+        [parentView setFrame:newFrame];
+        NSLog(@"Old Frame %@", NSStringFromCGRect(parentView.frame));
+        NSLog(@"Old Frame %@", NSStringFromCGRect(imageView.frame));
+        [parentView addSubview:couponView];
+        
 		NSUInteger reflectionHeight=parentView.bounds.size.height*reflectionFraction;
 		
 		// create the reflection image, assign it to the UIImageView and add the image view to the containerView
