@@ -67,6 +67,8 @@
 }
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+    NSString* newStr = [NSString stringWithUTF8String:[data bytes]];
+    NSLog(@"newStr %@",newStr);
 	[xmlResponse appendData:data];
 }
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

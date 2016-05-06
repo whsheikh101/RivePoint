@@ -94,6 +94,7 @@
     NSString * _mail = tfEmail.text;
     NSString * _pswd = tfPaswrd.text;
     if (_mail && _mail.length > 0 && [StringUtil validateEmail:_mail])
+    //if (_mail && _mail.length > 0 && [StringUtil validationEmailTextField:_mail])
     {
         if (_pswd && _pswd.length > 0)
         {
@@ -176,7 +177,6 @@
     {
         [self dismissModalViewControllerAnimated:NO];
         [[NSNotificationCenter defaultCenter] postNotificationName:k_RP_Register_Call object:nil userInfo:nil];
-        
     }
 }
 

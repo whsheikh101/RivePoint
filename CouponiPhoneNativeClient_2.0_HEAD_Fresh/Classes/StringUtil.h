@@ -13,6 +13,7 @@
 
 }
 + (BOOL) validateEmail:(NSString *)email;
++ (BOOL)validationEmailTextField:(NSString *)inputText;
 + (BOOL) checkDeuplicates:(NSString *) email delimiter:(char) delimiter;
 + (BOOL) checkForIllegalCharacter:(NSString *) email;
 @end

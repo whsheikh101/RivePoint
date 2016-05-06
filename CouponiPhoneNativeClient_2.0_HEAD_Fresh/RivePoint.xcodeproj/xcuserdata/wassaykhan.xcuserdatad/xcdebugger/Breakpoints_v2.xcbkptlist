@@ -794,7 +794,7 @@
                   moduleName = "RivePoint"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wassaykhan/RivePoint/CouponiPhoneNativeClient_2.0_HEAD_Fresh/Classes/MapViewController.m"
-                  timestampString = "480501118.9453"
+                  timestampString = "481036423.593935"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -809,7 +809,7 @@
                   moduleName = "RivePoint"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wassaykhan/RivePoint/CouponiPhoneNativeClient_2.0_HEAD_Fresh/Classes/MapViewController.m"
-                  timestampString = "480501118.945439"
+                  timestampString = "481036423.594037"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -932,7 +932,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/CouponViewController.m"
-            timestampString = "480500499.249646"
+            timestampString = "480587192.187084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "599"
@@ -1051,38 +1051,6 @@
             endingLineNumber = "974"
             landmarkName = "-checkApplicationVersion"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[RivePointAppDelegate checkApplicationVersion]"
-                  moduleName = "RivePoint"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wassaykhan/RivePoint/CouponiPhoneNativeClient_2.0_HEAD_Fresh/Classes/RivePointAppDelegate.m"
-                  timestampString = "480501118.967226"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "974"
-                  endingLineNumber = "974"
-                  offsetFromSymbolStart = "431">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[RivePointAppDelegate checkApplicationVersion]"
-                  moduleName = "RivePoint"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wassaykhan/RivePoint/CouponiPhoneNativeClient_2.0_HEAD_Fresh/Classes/RivePointAppDelegate.m"
-                  timestampString = "480501118.967619"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "974"
-                  endingLineNumber = "974"
-                  offsetFromSymbolStart = "460">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1290,6 +1258,38 @@
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "-connection:didReceiveResponse:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmailViewController.m"
+            timestampString = "481015316.187503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-submit"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/HttpTransportAdaptor.m"
+            timestampString = "481034672.954729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-connection:didReceiveData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

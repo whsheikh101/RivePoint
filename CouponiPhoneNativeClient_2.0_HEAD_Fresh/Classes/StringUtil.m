@@ -80,6 +80,21 @@
 	return YES;
 }
 
++ (BOOL)validationEmailTextField:(NSString *)inputText {
+    NSString *emailRegex = @"[A-Z0-9a-z][A-Z0-9a-z._%+-]*@[A-Za-z0-9][A-Za-z0-9.-]*\\.[A-Za-z]{2,6}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    NSRange aRange;
+    if([emailTest evaluateWithObject:inputText]) {
+        aRange = [inputText rangeOfString:@"." options:NSBackwardsSearch range:NSMakeRange(0, [inputText length])];
+        //int indexOfDot = aRange.location;
+        if(aRange.location != NSNotFound) {
+            //NSString *topLevelDomain = [inputText substringFromIndex:indexOfDot];
+            //topLevelDomain = [topLevelDomain lowercaseString];
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
 
 + (BOOL) checkDeuplicates:(NSString *) email delimiter:(char) delimiter {
 	int charCount = 0;
