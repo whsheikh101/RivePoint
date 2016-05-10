@@ -264,7 +264,7 @@ void uncaughtExceptionHandler(NSException *e) {
 //            self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
 //            self.alert.tag = 1;
 //            [self.alert show];
-            return;
+            //return;
         }
     }
     
@@ -976,7 +976,7 @@ void uncaughtExceptionHandler(NSException *e) {
             return NO;
         }else{
             for (id config in configData){
-                itunesVersion = [config valueForKey:@"version"];
+                itunesVersion = [NSString stringWithFormat:@"%@",[config valueForKey:@"version"]];
             }
             
             NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];

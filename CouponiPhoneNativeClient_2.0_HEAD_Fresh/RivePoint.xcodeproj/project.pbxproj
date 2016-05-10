@@ -2767,15 +2767,15 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "c43ff6b0-843c-41c7-a34d-fbb54c1db738";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c43ff6b0-843c-41c7-a34d-fbb54c1db738";
+				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
