@@ -258,15 +258,16 @@ void uncaughtExceptionHandler(NSException *e) {
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
-   // if ([self networkStatus]) {
-        /*
-        if ([self checkApplicationVersion]){
-            self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            self.alert.tag = 1;
-            [self.alert show];
-        }
-         */
+    if ([self networkStatus]) {
         
+        if ([self checkApplicationVersion]){
+//            self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            self.alert.tag = 1;
+//            [self.alert show];
+            return;
+        }
+    }
+    
         // Add the tab bar controller's current view as a subview of the window
         _facebook = [[Facebook alloc]initWithAppId:@"219979578145441" andDelegate:self];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -970,7 +971,7 @@ void uncaughtExceptionHandler(NSException *e) {
     
     NSString *itunesVersion;
     NSArray *configData = [json valueForKey:@"results"];
-    if (configData == nil) {
+    if (configData != nil) {
         if (configData <= 0) {
             return NO;
         }else{
@@ -985,7 +986,11 @@ void uncaughtExceptionHandler(NSException *e) {
                 return NO;
             }
             else{
+                self.alert = [[UIAlertView alloc]initWithTitle:@"New Version" message:@"A new version of app is available, Please download." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Update", nil];
+                [self.alert show];
+                self.alert.tag = 1;
                 return YES;
+
             }
         }
         
@@ -994,7 +999,7 @@ void uncaughtExceptionHandler(NSException *e) {
     }
     
 }
-/*
+
 #pragma mark - UIAlertView Delegate
 -(void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (actionSheet.tag == 1) {
@@ -1002,7 +1007,7 @@ void uncaughtExceptionHandler(NSException *e) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
     }
     
-}*/
+}
 
 //Checking the network status.....
 - (BOOL)networkStatus {

@@ -2669,8 +2669,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2695,8 +2695,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rivepoint.rivepointApp;
 				PRODUCT_NAME = RivePoint;
-				PROVISIONING_PROFILE = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
+				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -2710,8 +2710,8 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2734,8 +2734,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rivepoint.rivepointApp;
 				PRODUCT_NAME = RivePoint;
-				PROVISIONING_PROFILE = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
+				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -2746,16 +2746,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
+				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -2766,7 +2766,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Netpace Inc. (GKPFHC7844)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: waqas haider sheikh (U62P259GWC)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2774,8 +2774,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "b3f4c7e1-b704-4786-8c93-758b85c5bef5";
+				PROVISIONING_PROFILE = "c43ff6b0-843c-41c7-a34d-fbb54c1db738";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c43ff6b0-843c-41c7-a34d-fbb54c1db738";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
