@@ -122,6 +122,7 @@
 +(NSData *)getVendorSmallLogo:(NSString *)poiId {
 	RivePointAppDelegate *appDelegate = (RivePointAppDelegate *)[[UIApplication sharedApplication] delegate];
 	NSString *prefixURL = [appDelegate getRivepointServerURLString];
+    prefixURL = [prefixURL stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 	NSURL *url = [NSURL URLWithString:[[NSString stringWithFormat:@"%@%@?type=5&poiId=%@",prefixURL,RIVEPOINT_IMAGE_SERVLET,poiId] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	NSData *receivedData =  [[[NSData alloc] initWithContentsOfURL:url] autorelease];
 //	NSLog(@"attributes: Received data length %d", [receivedData length]);

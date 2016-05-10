@@ -24,7 +24,8 @@
 	NSString *urlFileName = @"url";
 	NSString *urlPathString = [thisBundle pathForResource:urlFileName	ofType:@"txt"];
 	NSString *prefixURL = [NSString stringWithContentsOfFile:urlPathString];
-    NSLog(@"%@",prefixURL);
+    prefixURL = [prefixURL stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    NSLog(@"BaseURL:%@",prefixURL);
 //	NSLog(prefixURL);
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",prefixURL,RIVEPOINT_MAIN_SERVLET]];
 	NSString *requestParamterForServer = [NSString stringWithFormat:@"%@%@",GPS_FRAMEWORK_PAYLOAD,xmlRequest ];
