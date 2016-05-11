@@ -247,5 +247,4 @@
 -(void) gotoFirstPOITabFromController:(UINavigationController *)controller;
 -(void) removeLoadingViewFromSuperView;
 -(BOOL) networkStatus;
-
 @end

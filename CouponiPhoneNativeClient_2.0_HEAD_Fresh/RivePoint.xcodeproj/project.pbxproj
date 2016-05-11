@@ -429,6 +429,8 @@
 		DA680C3B1BCBAA130077F2AD /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = DA680C351BCBAA130077F2AD /* zbar-help.html */; };
 		DA680C3C1BCBAA130077F2AD /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = DA680C361BCBAA130077F2AD /* zbar-helpicons.png */; };
 		DA680C3D1BCBAA130077F2AD /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = DA680C371BCBAA130077F2AD /* zbar-samples.png */; };
+		DAEF83A11CE33C720068F0DA /* BlankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEF839F1CE33C720068F0DA /* BlankViewController.m */; };
+		DAEF83A21CE33C720068F0DA /* BlankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAEF83A01CE33C720068F0DA /* BlankViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1052,6 +1054,9 @@
 		DA680C351BCBAA130077F2AD /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		DA680C361BCBAA130077F2AD /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		DA680C371BCBAA130077F2AD /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		DAEF839E1CE33C720068F0DA /* BlankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankViewController.h; sourceTree = "<group>"; };
+		DAEF839F1CE33C720068F0DA /* BlankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankViewController.m; sourceTree = "<group>"; };
+		DAEF83A01CE33C720068F0DA /* BlankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlankViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1111,6 +1116,9 @@
 				38E61DCB0F4C4E5E00D014B6 /* db */,
 				38E61DCA0F4C4E5600D014B6 /* managers */,
 				38E61DC80F4C4E4B00D014B6 /* beans */,
+				DAEF839E1CE33C720068F0DA /* BlankViewController.h */,
+				DAEF839F1CE33C720068F0DA /* BlankViewController.m */,
+				DAEF83A01CE33C720068F0DA /* BlankViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -2426,6 +2434,7 @@
 				49D0007416EF3DB1009BC585 /* radio-Btn-on@2x.png in Resources */,
 				49D0007516EF3DB1009BC585 /* raingStar-bg-gray.png in Resources */,
 				49D0007616EF3DB1009BC585 /* raingStar-bg-gray@2x.png in Resources */,
+				DAEF83A21CE33C720068F0DA /* BlankViewController.xib in Resources */,
 				49D0007716EF3DB1009BC585 /* raingStar-bg.png in Resources */,
 				49D0007816EF3DB1009BC585 /* raingStar-bg@2x.png in Resources */,
 				49D0007916EF3DB1009BC585 /* rateBg.png in Resources */,
@@ -2561,6 +2570,7 @@
 				497D345B1001B84E000B98E5 /* SharedCouponInbox.m in Sources */,
 				497D34FF1001D0FD000B98E5 /* CouponPoiXMLParser.m in Sources */,
 				497D35051001E9B2000B98E5 /* SCListCouponsViewController.mm in Sources */,
+				DAEF83A11CE33C720068F0DA /* BlankViewController.m in Sources */,
 				497D350C100216C6000B98E5 /* SharedPoiListController.m in Sources */,
 				DA680C101BCBA8A00077F2AD /* MGTwitterStatusesLibXMLParser.m in Sources */,
 				498220C61003258C000612C3 /* COTDXMLParser.m in Sources */,
@@ -2695,8 +2705,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rivepoint.rivepointApp;
 				PRODUCT_NAME = RivePoint;
-				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				PROVISIONING_PROFILE = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -2734,8 +2744,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rivepoint.rivepointApp;
 				PRODUCT_NAME = RivePoint;
-				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				PROVISIONING_PROFILE = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -2754,8 +2764,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				PROVISIONING_PROFILE = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -2774,8 +2784,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72cc5b7e-b40d-43ff-9855-601e5853eba3";
+				PROVISIONING_PROFILE = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7c702d3b-e90e-4fcd-b8db-3e7fae59cb70";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";

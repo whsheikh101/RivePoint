@@ -30,6 +30,7 @@
 #import "MainViewController.h"
 #import "SearchVendorController.h"
 #import "Reachability.h"
+#import "BlankViewController.h"
 
 @implementation RivePointAppDelegate
 
@@ -190,43 +191,6 @@ ProcessViewController *waitScreenView;
 	tabBarController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 
 }
-/*
-void uncaughtExceptionHandler(NSException *e) {
-	[FlurryAPI logError:@"Uncaught" message:@"Crash!" exception:e];
-	NSLog(@"*****Caught %@: %@", [e name], [e  reason]);
-
-	
-}*/
-
-
-//-(void) fetchUserProfile
-//{
-//    NSString * _nStr = [[NSUserDefaults standardUserDefaults] valueForKey:k_User_Name];
-//    NSString * _sStr = [[NSUserDefaults standardUserDefaults] valueForKey:k_User_Name];
-//    NSString * _aStr = [[NSUserDefaults standardUserDefaults] valueForKey:k_User_Name];
-//    NSString * _dStr = [[NSUserDefaults standardUserDefaults] valueForKey:k_User_Name];
-//    NSString * _iStr = [[NSUserDefaults standardUserDefaults] valueForKey:k_User_Name];
-//    if (_nStr == NULL)
-//    {
-//        [[NSUserDefaults standardUserDefaults] setValue:@"Name" forKey:k_User_Name];
-//    }
-//    if (_sStr == NULL)
-//    {
-//        [[NSUserDefaults standardUserDefaults] setValue:@"Marital Status" forKey:k_User_Status];
-//    }
-//    if (_aStr == NULL)
-//    {
-//        [[NSUserDefaults standardUserDefaults] setValue:@"Address" forKey:k_User_Address];
-//    }
-//    if (_dStr == NULL)
-//    {
-//        [[NSUserDefaults standardUserDefaults] setValue:@"profession" forKey:k_User_Prof];
-//    }
-//    if (_iStr == NULL)
-//    {
-//        [[NSUserDefaults standardUserDefaults] setValue:@"Intersts" forKey:k_User_Interst];
-//    }
-//}
 
 -(void) fetchUserLogedInId
 {
@@ -255,19 +219,11 @@ void uncaughtExceptionHandler(NSException *e) {
 
 #pragma mark
 #pragma mark applicationDidFinishLaunching
-
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
-    if ([self networkStatus]) {
-        
-        if ([self checkApplicationVersion]){
-//            self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available to download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-//            self.alert.tag = 1;
-//            [self.alert show];
-            //return;
-        }
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    if (![self networkStatus]) {
+        return NO;
     }
-    
+    if ([self checkApplicationVersion]){
         // Add the tab bar controller's current view as a subview of the window
         _facebook = [[Facebook alloc]initWithAppId:@"219979578145441" andDelegate:self];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -322,7 +278,17 @@ void uncaughtExceptionHandler(NSException *e) {
         }
         self.window.rootViewController = tabBarController;
         [self.window makeKeyAndVisible];
-   // }
+        
+        return YES;
+    }
+    else{
+        self.alert = [[UIAlertView alloc]initWithTitle:@"New Version!!" message:@"A new version of app is available for download" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Update", nil];
+        [self.alert show];
+        
+        self.window.rootViewController = [[BlankViewController alloc]initWithNibName:@"BlankViewController" bundle:[NSBundle mainBundle]];
+        [self.window makeKeyAndVisible];
+        return NO;
+    }
 }
 
 -(LocationUpdater *) getLocationUpdatorInstance{
@@ -334,7 +300,7 @@ void uncaughtExceptionHandler(NSException *e) {
 }
 -(void) setDefaultSettings{
 	if(!sManager){
-		sManager = [[SettingManager alloc]init];		
+		sManager = [[SettingManager alloc]init];
 	}
 	self.setting = [sManager find];
 
@@ -448,17 +414,10 @@ void uncaughtExceptionHandler(NSException *e) {
 	}
 	NSString *label = @"";
 	label = [label stringByAppendingString:address];
-//	label = [label stringByAppendingString:@"\nLatitude: "];
-//	label = [label stringByAppendingString:latitude];
-//	label = [label stringByAppendingString:@"\nLongitude: "];
-//	label = [label stringByAppendingString:longitude];
 	return label;
 }
 
 -(void) updateSettingFromGeoCode:(GeocodeAddress*)code{
-    
-//    setting = [Setting getDefaultSetting];
-    
     NSLog(@"updateSettingFromGeoCode In");
     
 	Setting *s = [sManager find];
@@ -474,36 +433,8 @@ void uncaughtExceptionHandler(NSException *e) {
 	}
 	setting = s;
 	zipCodeLabel.title = s.zip;
-//	browseScreenZIPBarButton.title = s.zip;
 	[sManager update:s];
-//    NSLog(@"updateSettingFromGeoCode Out");
 }
-
-//-(void) updateSettingFromReverseGeoCode:(GeocodeAddress*)code{
-//	Setting *s = setting;
-//	s.zip = code.postalcode;
-//	s.latitude = code.latitude;
-//	s.longitute = code.longitude;
-//	zipCodeLabel.title = s.zip;
-////	browseScreenZIPBarButton.title = s.zip;
-//}
-
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//		NSLog(@"OK pressed");
-//		
-//}
-
-//-(void) updateZipCode:(GeocodeAddress*) code{
-//	
-//	if(code){
-//		[self updateSettingFromReverseGeoCode:code];
-//
-//	}
-//	else{
-//		NSLog(@"zip not found from latitude and longitude");
-//	}
-//	
-//}
 
 -(void)resetGetCouponPoiList{
 	//[poiArray release];
@@ -968,45 +899,28 @@ void uncaughtExceptionHandler(NSException *e) {
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[responseString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-    
+  
     NSString *itunesVersion;
     NSArray *configData = [json valueForKey:@"results"];
-    if (configData != nil) {
-        if (configData <= 0) {
-            return NO;
-        }else{
-            for (id config in configData){
-                itunesVersion = [NSString stringWithFormat:@"%@",[config valueForKey:@"version"]];
-            }
-            
-            NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];
-            NSString *version = infoDictionary[@"CFBundleShortVersionString"];
-            
-            if ([version doubleValue]>=[itunesVersion doubleValue]) {
-                return NO;
-            }
-            else{
-                self.alert = [[UIAlertView alloc]initWithTitle:@"New Version" message:@"A new version of app is available, Please download." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Update", nil];
-                [self.alert show];
-                self.alert.tag = 1;
-                return YES;
-
-            }
-        }
-        
-    }else{
-        return NO;
+    if (configData) {
+        itunesVersion = [configData objectAtIndex:0][@"version"];
     }
     
+    NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];
+    NSString *version = infoDictionary[@"CFBundleShortVersionString"];
+    
+    if ([version doubleValue]>=[itunesVersion doubleValue]) {
+        return YES;
+    }
+    else{
+        return NO;
+    }
 }
 
 #pragma mark - UIAlertView Delegate
 -(void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (actionSheet.tag == 1) {
-        NSString *iTunesLink = @"itms-apps://itunes.apple.com/app/id303276338";
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
-    }
-    
+    NSString *iTunesLink = @"itms-apps://itunes.apple.com/app/id303276338";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
 }
 
 //Checking the network status.....
